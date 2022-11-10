@@ -53,7 +53,7 @@ export class AdsController {
   @Post()
   @HttpCode(HttpStatus.OK)
   @UseInterceptors(
-    FilesInterceptor('attachment', 10, {
+    FilesInterceptor('attachment', 25, {
       storage: diskStorage({
         destination: './public',
         filename: editFileName,
