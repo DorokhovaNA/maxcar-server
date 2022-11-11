@@ -4,11 +4,16 @@ import { AdsService } from './ads.service';
 import { AdsController } from './ads.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Ad, AdsSchema } from 'src/schemas/ads.schema';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Ad.name, schema: AdsSchema }]),
     AuthModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(process.cwd(), 'public'),
+    }),
   ],
   providers: [AdsService],
   controllers: [AdsController],
