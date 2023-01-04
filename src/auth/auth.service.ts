@@ -1,9 +1,9 @@
 import { jwtConstants } from './constants';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from './../users/users.service';
-import { Injectable } from '@nestjs/common';
 import { User } from 'src/schemas/users.schema';
-import { compare, hash } from 'src/utils/crypto';
+import { compare } from 'src/utils/crypto';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AuthService {
