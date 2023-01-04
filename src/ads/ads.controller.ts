@@ -22,7 +22,7 @@ import { CreateAdDto } from './dto/create-ad.dto';
 import { UpdateAdDto } from './dto/update-ad.dto';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
-import { editFileName, imageFileFilter } from 'src/utils/file-upload';
+import { editFileName, imageFileFilter } from '../utils/file-upload';
 import { SearchAdDto } from './dto/search-ad.dto';
 
 @Controller('ads')

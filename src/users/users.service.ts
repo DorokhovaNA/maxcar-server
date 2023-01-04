@@ -2,8 +2,8 @@ import { CreateUserDto } from './../auth/dto/create-user.dto';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { User, UsersDocument } from 'src/schemas/users.schema';
-import { LoginUserDto } from 'src/auth/dto/login-user.dto';
+import { User, UsersDocument } from '../schemas/users.schema';
+import { LoginUserDto } from '../auth/dto/login-user.dto';
 import { hash } from '../utils/crypto';
 
 @Injectable()

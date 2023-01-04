@@ -4,8 +4,8 @@ import { UpdateAdDto } from './dto/update-ad.dto';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Ad, AdsDocument } from 'src/schemas/ads.schema';
-import { getData } from 'src/utils/change-query';
+import { Ad, AdsDocument } from '../schemas/ads.schema';
+import { getData } from '../utils/change-query';
 
 @Injectable()
 export class AdsService {

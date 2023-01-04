@@ -1,8 +1,8 @@
 import { jwtConstants } from './constants';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from './../users/users.service';
-import { User } from 'src/schemas/users.schema';
-import { compare } from 'src/utils/crypto';
+import { User } from '../schemas/users.schema';
+import { compare } from '../utils/crypto';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
