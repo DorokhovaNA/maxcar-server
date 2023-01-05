@@ -11,13 +11,12 @@ import configuration from './config/configuration';
 
 @Module({
   imports: [
-    MongooseModule.forRootAsync({
-      imports: [ConfigModule],
-      useClass: MongooseConfigService,
-    }),
-    ConfigModule.forRoot({
-      load: [configuration],
-    }),
+    MongooseModule.forRoot(
+      'mongodb+srv://vercel-admin-user:YyRViFpyOa8NzuAc@cluster0.9syoddj.mongodb.net/Maxcar?retryWrites=true&w=majority',
+    ),
+    // ConfigModule.forRoot({
+    //   load: [configuration],
+    // }),
     UsersModule,
     AuthModule,
     AdsModule,
